@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/9.jpg);
+    background-size: cover;
+    font-family: 'Dosis', sans-serif;
+}
+.header_menu{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#iconbar{
+    color: seashell;
+    font-size: 2rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+}
+#iconbar:hover{
+    color: sandybrown;
+}
+.logo{
+    position: relative;
+    width: 20%;
+    text-align: center;
+}
+.logo img{
+    height: 90px;
+}
+.menu_list{
+    width: 80%;
+    text-align: right;
+    padding-right: 50px;
+}
+.menu_list li{
+    display: inline-block;
+    text-transform: uppercase;
+    list-style: none;
+    letter-spacing: 2px;
+    padding-left: 50px;
+}
+.menu_list li a{
+    color: rgba(255,255,255, .8);
+    text-decoration: none;
+}
+.menu_list li a:hover{
+    color: sandybrown;
+}
+.header_content{
+    text-transform: uppercase;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgba(255,255,255, .8);
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.header_content h2{
+    margin-bottom: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+}
+.header_content h1{
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 0.7em;
+}
+.header_content button{
+    height: auto;
+    padding: 8px 37px;
+    color: white;
+    font-size: 12px;
+    background-color: transparent;
+    margin-right: 20px;
+}
+.header_content button a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
+.header_content button:hover{
+    text-shadow: beige;
+    background-color: slategray;
+    border: 1px solid white;
+}
+.sarir{
+    background: slategrey;
+}
+
+/* ///////////////////////media queries///////////// */
+/* big landscape tablets, laptops, and desktops */
+@media (max-width: 1025px){
+    .logo{
+        width: 100%;
+        position: absolute;
+    }
+    .menu_list ul{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu_list ul li:hover{
+        text-shadow: 3px 4px 1px black;
+        color: sandybrown;
+    }
+    .menu_list ul li:hover > a{
+        color: sandybrown;
+    }
+    #iconbar{
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu_list.responsive{
+        width: 100%!important;
+        height: 0px!important;
+        background-color: black;
+        position: relative;
+        /* z-index: 11111; */
+    }
+    .menu_list.responsive ul{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .menu_list.responsive ul li{
+        margin-bottom: 60px;
+        margin-top: 50px;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    .header_content.responsive{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+/* tablet,landscape,low resolution laptop and desktop */
+@media (max-width: 990px){
+    .header_content h1{
+        font-size: 40px;
+        letter-spacing: 0.6em;
+    }
+    .header_content h2{
+        font-size: 14px;
+    }
+}
+/* portrait tablet, e-readers kindle */
+@media (max-width: 800px){
+    header{
+        background-size: 100% 100%;
+    }
+    .header_content h1{
+        font-size: 35px;
+    }
+    .header_content h2{
+        font-size: 12px;
+    }
+}
+/* smartphonnes,android phones , landscape ipone */
+@media (max-width: 600px){
+    .header_content h1{
+        font-size: 30px;
+    }
+    .header_content h2{
+        font-size: 10px;
+    }
+}
+/* smartphones, portrait iphone, portrait 480*320 phones (android) */
+@media (max-width: 480px){
+    .header_content h1{
+        font-size: 25px;
+    }
+    .header_content h2{
+        font-size: 8px;
+    }
+}
+@media (max-width: 380px){
+    .header_content h1{
+        font-size: 30px;
+    }
+    .header_content h2{
+        font-size: 10px;
+    }
+    .header_content button:not(:last-child){
+        margin-bottom: 20px;
+    }
+}

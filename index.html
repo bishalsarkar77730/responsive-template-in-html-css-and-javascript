@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Tech Cherry</title>
+</head>
+<body>
+    <header>
+        <div class="header_menu">
+            <div class="logo">
+                <img src="img/color (2).png" alt="Tech Cherry">
+            </div>
+            <div class="menu_list" id="menu_small">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_content" id="head_responsive">
+            <h2>Tech Cherry/ Web Developer/ Entrepreneur</h2>
+            <h1>Bishal Sarkar</h1>
+            <button><a href="#">About Me</a></button>
+            <button><a href="#">Contact Us</a></button>
+        </div>
+        <a href="#" id="iconbar" onclick="responsive_menu()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    </header>
+<script>
+    function responsive_menu(){
+        var e = document.getElementById('menu_small');
+        if(e.className === 'menu_list'){
+            e.className += " responsive";
+        }else{
+            e.className = 'menu_list';
+        }
+        var b = document.getElementById('head_responsive');
+        if(b.className === 'header_content'){
+            b.className += " responsive";
+        }else{
+            b.className = 'header_content';
+        }
+        }
+</script>
+</body>
+</html>
